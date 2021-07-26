@@ -7,16 +7,18 @@ import SignUp from './SignUp.js'
 import Login from './Login.js'
 
 
+
 function App() {
   return (
     <div className='App'>
       <nav>
-        <h1 className='header'>Water My Plants</h1>
+        <h1 className='header'>Water My Plants
         <div className='nav-links'>
           <Link to='/'>Home</Link>
           <Link id='sign-up' to='/sign-up'>Sign Up</Link>
           <Link id='login' to='/login'>Log In</Link>
         </div>
+        </h1>
       </nav>
       <Switch>
         <Route path='/sign-up'>
