@@ -8,8 +8,8 @@ export default function Plant(props) {
     }
 
     return (
-        <div>
-            <img src={plantData.image} alt={plantData.alt}/>
+        <div class='plant-container'>
+            <img src={plantData.image} alt='Your beautiful plant'/>
             <h3>{plantData.nickname}</h3>
             <h4>{plantData.species}</h4>
             <p>Watering Schedule : {plantData.h2oFrequency}</p>

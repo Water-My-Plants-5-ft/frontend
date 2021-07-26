@@ -1,0 +1,16 @@
+.myPlants-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: space-around;
+}
+
+.plant-container {
+    width: 30%;
+
+}
+
+.plant-container img {
+    height: 40vh
+}

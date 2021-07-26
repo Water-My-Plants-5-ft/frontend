@@ -5,6 +5,7 @@ import { reach } from 'yup'
 import Home from './Home'
 import SignUp from './SignUp.js'
 import Login from './Login.js'
+import PlantsHome from './PlantsHome'
 
 
 
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path='/login'>
           <Login/>
+        </Route>
+        <Route path='/myplants'>
+          <PlantsHome/>
         </Route>
         <Route path='/'>
           <Home />
