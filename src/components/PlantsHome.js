@@ -48,6 +48,7 @@ export default function PlantsHome(props) {
         setIsOpen(true)}
     const closeModal = () => {
         setIsOpen(false)}
+    Modal.setAppElement('#root');
     
     // Form Initial States
     const initialNewPlantValues = {
@@ -152,7 +153,7 @@ export default function PlantsHome(props) {
 
             >
                 <h2>Create a New Plant</h2>
-                <form className='create-new-plant-form' id='new-plant-form'>
+                <form className='create-new-plant-form' id='new-plant-form' onSubmit={onSubmit}>
                     <div>
                         <label>Plant Nickname:&nbsp;
                             <input
