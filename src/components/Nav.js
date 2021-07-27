@@ -23,7 +23,7 @@ export default function Nav(props) {
       </nav>
       <Modal className='Modal' isOpen={disabled}>
         <div className="randomname">
-          <img src="https://www.gardeningknowhow.com/wp-content/uploads/2011/07/plant.jpg" alt="Avatar" class="avatar" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcU50X1UOeDaphmUyD6T8ROKs-HjeirpOoapiWbC9cLAqewFy1gthrgUTB9E7nKjRwOVk&usqp=CAU" alt="Avatar" class="avatar" />
         </div>
         <label>Username&nbsp;
           <input
