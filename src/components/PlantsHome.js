@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import Modal from 'react-modal'
 import { reach } from 'yup'
 import schema from '../validation/newPlant-formSchema.js'
 import Plant from './Plant'
+import CreatePlantModal from './CreatePlantModal'
 import '../PlantsHome.css'
 
 // sample myPlantList
@@ -41,14 +41,14 @@ const myPlantList=[
 ]
 
 // End of sample MyPlantList
-export default function PlantsHome(props) {
+
+export default function PlantsHome(props) {    
     // Modal States
     const [modalIsOpen, setIsOpen] = useState(false)
     const openModal = () => {
         setIsOpen(true)}
     const closeModal = () => {
         setIsOpen(false)}
-    Modal.setAppElement('#root');
     
     // Form Initial States
     const initialNewPlantValues = {
@@ -97,21 +97,12 @@ export default function PlantsHome(props) {
 
     // Form Event Handlers
 
-    const onChange = evt => {
-        const { name, value} = evt.target
-        inputChange(name, value)
-    }
     const inputChange = (name, value) => {
         validate(name, value)
         setNewPlantFormValues({
           ...newPlantFormValues,
           [name]: value
         })
-    }
-
-    const onSubmit = evt => {
-        evt.preventDefault()
-        formSubmitNewPlant()
     }
 
     const formSubmitNewPlant = () => {
@@ -145,67 +136,15 @@ export default function PlantsHome(props) {
                     )
                 })}
             </div>
-            <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                class='create-plant-modal'
-                contentLabel='Add a New Plant Modal'
-
-            >
-                <h2>Create a New Plant</h2>
-                <form className='create-new-plant-form' id='new-plant-form' onSubmit={onSubmit}>
-                    <div>
-                        <label>Plant Nickname:&nbsp;
-                            <input
-                                value={newPlantFormValues.nickname}
-                                onChange={onChange}
-                                name='nickname'
-                                type='text'
-                                id='nickname-input'
-                            />
-                        </label>
-                        <p>{newPlantFormErrors.nickname}</p>
-                    </div>
-                    <div>
-                        <label>Plant Species:&nbsp;
-                            <input
-                                value={newPlantFormValues.species}
-                                onChange={onChange}
-                                name='species'
-                                type='text'
-                                id='species-input'
-                            />
-                        </label>
-                        <p>{newPlantFormErrors.species}</p>
-                    </div>
-                    <div>
-                        <label>Watering Schedule:&nbsp;
-                            <input
-                                value={newPlantFormValues.h2oFrequency}
-                                onChange={onChange}
-                                name='h2oFrequency'
-                                type='text'
-                                id='h2oFrequency-input'
-                            />
-                        </label>
-                        <p>{newPlantFormErrors.h2oFrequency}</p>
-                    </div>
-                    <div>
-                        <label>Upload A Picture of Your Plant:&nbsp;
-                            <input
-                                value={newPlantFormValues.image}
-                                onChange={onChange}
-                                name='image'
-                                type='file'
-                                id='image-input'
-                            />
-                        </label>
-                    </div>
-                </form>
-                
-                <button disabled={disabled} >Submit New Plant</button>
-                <button onClick={closeModal}>Close</button>            
-            </Modal>
+            <CreatePlantModal
+                values={newPlantFormValues}
+                change={inputChange}
+                submit={formSubmitNewPlant}
+                disabled={disabled}
+                errors={newPlantFormErrors}
+                modalIsOpen={modalIsOpen}
+                closeModal={closeModal}
+            />
         </div>
     )
 }
