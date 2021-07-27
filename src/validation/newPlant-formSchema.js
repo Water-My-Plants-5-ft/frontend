@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-const formSchema = yup.object().shape({
+const formSchemaPlants = yup.object().shape({
     nickname: yup
         .string()
         .trim()
@@ -19,4 +19,4 @@ const formSchema = yup.object().shape({
     image: yup.string()
 })
 
-export default formSchema
+export default formSchemaPlants
