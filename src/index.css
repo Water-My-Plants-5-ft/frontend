@@ -76,3 +76,7 @@ h1.header{
   width: 15em;
   justify-content: space-between;
 }
+
+.Modal{
+  top: 20%;
+}

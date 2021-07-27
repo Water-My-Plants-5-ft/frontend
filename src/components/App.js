@@ -17,16 +17,8 @@ function App() {
   const [disabled, setDisabled] = useState(initialDisabled);
 
   return (
+    
     <div className='App'>
-      <nav>
-        <h1 className='header'>Water My Plants
-        <div className='nav-links'>
-          <Link to='/'>Home</Link>
-          <Link id='sign-up' to='/sign-up'>Sign Up</Link>
-          <button onClick={() => setDisabled(true)}>Login</button>
-        </div>
-        </h1>
-      </nav>
       <Nav disabled={disabled} setDisabled={setDisabled}/>
       <Switch>
         <Route path='/sign-up'>

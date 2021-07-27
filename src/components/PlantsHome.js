@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import { reach } from 'yup'
-import schema from '../validation/newPlant-formSchema.js'
+import formSchemaPlants from '../validation/newPlant-formSchema.js'
 import Plant from './Plant'
 import '../PlantsHome.css'
 
@@ -89,7 +89,7 @@ export default function PlantsHome(props) {
       }
     
     const validate = (name, value) => {
-    reach(schema, name)
+    reach(formSchemaPlants, name)
         .validate(value)
         .then(() => setNewPlantFormErrors({ ...newPlantFormErrors, [name]: '' }))
         .catch(err => setNewPlantFormErrors({ ...newPlantFormErrors, [name]: err.errors[0]}))
@@ -127,7 +127,7 @@ export default function PlantsHome(props) {
 
 // Form Side Effects
     useEffect(() => {
-        schema.isValid(newPlantFormValues).then(valid => setDisabled(!valid))
+        formSchemaPlants.isValid(newPlantFormValues).then(valid => setDisabled(!valid))
     }, [newPlantFormValues])
     
 
