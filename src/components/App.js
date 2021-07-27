@@ -6,10 +6,16 @@ import Home from './Home'
 import SignUp from './SignUp.js'
 import Login from './Login.js'
 import PlantsHome from './PlantsHome'
+import Modal from 'react-modal'
+import Nav from './Nav'
+import { render } from '@testing-library/react'
 
-
+const initialDisabled = false;
 
 function App() {
+
+  const [disabled, setDisabled] = useState(initialDisabled);
+
   return (
     <div className='App'>
       <nav>
@@ -17,16 +23,14 @@ function App() {
         <div className='nav-links'>
           <Link to='/'>Home</Link>
           <Link id='sign-up' to='/sign-up'>Sign Up</Link>
-          <Link id='login' to='/login'>Log In</Link>
+          <button onClick={() => setDisabled(true)}>Login</button>
         </div>
         </h1>
       </nav>
+      <Nav disabled={disabled} setDisabled={setDisabled}/>
       <Switch>
         <Route path='/sign-up'>
           <SignUp/>
-        </Route>
-        <Route path='/login'>
-          <Login/>
         </Route>
         <Route path='/myplants'>
           <PlantsHome/>
