@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import "../CreatePlantModal.css";
+import styled from "styled-components";
+import { Container, Row, Col, Button } from "reactstrap";
+
+import { axiosWithAuth } from "../utils/axiosWithAuth";
+
+import { useHistory } from "react-router";
 import plant1 from "../assets/newplantoptions/plant1.jpg";
 import plant2 from "../assets/newplantoptions/plant2.jpg";
 import plant3 from "../assets/newplantoptions/plant3.jpg";
@@ -14,19 +20,48 @@ import plant10 from "../assets/newplantoptions/plant10.jpg";
 import plant11 from "../assets/newplantoptions/plant11.jpg";
 import plant12 from "../assets/newplantoptions/plant12.jpg";
 
+const userID = window.localStorage.getItem("id");
+const initialValue = {
+  nickname: "",
+  species: "",
+  h2o_frequency: "",
+};
+
 export default function CreatePlantModal(props) {
   const { values, change, submit, disabled, errors, modalIsOpen, closeModal } =
     props;
 
   // Modal States
+  const [item, setItem] = useState(initialValue);
+  const history = useHistory();
 
   Modal.setAppElement("#root");
 
   // Modal Event Handlers
-  const onSubmit = (evt) => {
-    evt.preventDefault();
-    submit();
-    closeModal();
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    axiosWithAuth()
+      .post(`/users/${userID}/plants`, item)
+      .then((res) => {
+        console.log("New item added");
+        console.log(item);
+        // alert("New Plant Added ");
+
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setItem(initialValue);
+  };
+  const inputChange = (e) => {
+    setItem({
+      ...item,
+      [e.target.name]: e.target.value,
+    });
+
+    //validateItem(name, item[name]);
   };
 
   const onChange = (evt) => {
@@ -53,8 +88,8 @@ export default function CreatePlantModal(props) {
           <label>
             Plant Nickname:&nbsp;
             <input
-              value={values.nickname}
-              onChange={onChange}
+              value={item.nickname}
+              onChange={inputChange}
               name="nickname"
               type="text"
               id="nickname-input"
@@ -66,8 +101,8 @@ export default function CreatePlantModal(props) {
           <label>
             Plant Species:&nbsp;
             <input
-              value={values.species}
-              onChange={onChange}
+              value={item.species}
+              onChange={inputChange}
               name="species"
               type="text"
               id="species-input"
@@ -79,8 +114,8 @@ export default function CreatePlantModal(props) {
           <label>
             Watering Schedule:&nbsp;
             <input
-              value={values.h2o_frequency}
-              onChange={onChange}
+              value={item.h2o_frequency}
+              onChange={inputChange}
               name="h2o_frequency"
               type="text"
               id="h2o_frequency-input"
@@ -97,8 +132,8 @@ export default function CreatePlantModal(props) {
                 type="radio"
                 name="image"
                 value={plant1}
-                onChange={onChange}
-                checked={values.image === plant1}
+                onChange={inputChange}
+                checked={item.image === plant1}
                 id="plant1"
               />
               <label for="plant1" id="plantPic1">
@@ -114,8 +149,8 @@ export default function CreatePlantModal(props) {
                 type="radio"
                 name="image"
                 value={plant2}
-                onChange={onChange}
-                checked={values.image === plant2}
+                onChange={inputChange}
+                checked={item.image === plant2}
                 id="plant2"
               />
               <label for="plant2" id="plantPic2">
@@ -131,8 +166,8 @@ export default function CreatePlantModal(props) {
                 type="radio"
                 name="image"
                 value={plant3}
-                onChange={onChange}
-                checked={values.image === plant3}
+                onChange={inputChange}
+                checked={item.image === plant3}
                 id="plant3"
               />
               <label for="plant3" id="plantPic3">
@@ -148,8 +183,8 @@ export default function CreatePlantModal(props) {
                 type="radio"
                 name="image"
                 value={plant4}
-                onChange={onChange}
-                checked={values.image === plant4}
+                onChange={inputChange}
+                checked={item.image === plant4}
                 id="plant4"
               />
               <label for="plant4" id="plantPic4">
@@ -166,7 +201,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant5}
                 onChange={onChange}
-                checked={values.image === plant5}
+                checked={item.image === plant5}
                 id="plant5"
               />
               <label for="plant5" id="plantPic5">
@@ -183,7 +218,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant6}
                 onChange={onChange}
-                checked={values.image === plant6}
+                checked={item.image === plant6}
                 id="plant6"
               />
               <label for="plant6" id="plantPic6">
@@ -200,7 +235,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant7}
                 onChange={onChange}
-                checked={values.image === plant7}
+                checked={item.image === plant7}
                 id="plant7"
               />
               <label for="plant7" id="plantPic7">
@@ -217,7 +252,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant8}
                 onChange={onChange}
-                checked={values.image === plant8}
+                checked={item.image === plant8}
                 id="plant8"
               />
               <label for="plant8" id="plantPic8">
@@ -234,7 +269,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant9}
                 onChange={onChange}
-                checked={values.image === plant9}
+                checked={item.image === plant9}
                 id="plant9"
               />
               <label for="plant9" id="plantPic9">
@@ -251,7 +286,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant10}
                 onChange={onChange}
-                checked={values.image === plant10}
+                checked={item.image === plant10}
                 id="plant10"
               />
               <label for="plant10" id="plantPic10">
@@ -268,7 +303,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant11}
                 onChange={onChange}
-                checked={values.image === plant11}
+                checked={item.image === plant11}
                 id="plant11"
               />
               <label for="plant11" id="plantPic11">
@@ -285,7 +320,7 @@ export default function CreatePlantModal(props) {
                 name="image"
                 value={plant12}
                 onChange={onChange}
-                checked={values.image === plant12}
+                checked={item.image === plant12}
                 id="plant12"
               />
               <label for="plant12" id="plantPic12">
@@ -298,7 +333,7 @@ export default function CreatePlantModal(props) {
             </div>
           </div>
         </div>
-        <button disabled={disabled}>Submit New Plant</button>
+        <button>Submit New Plant</button>
       </form>
       <button onClick={closeModal}>Close</button>
     </Modal>
