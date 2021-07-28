@@ -39,7 +39,7 @@ const Navigation = () => {
             <NavLink
               tag={Link}
               to="/addplants"
-              className={location.pathname === "/addrecipe" ? "active" : ""}
+
             >
               Add Plants
             </NavLink>
