@@ -60,7 +60,8 @@ export default function PlantsHome(props) {
     const initialNewPlantErrors = {
         nickname: '',
         species: '',
-        h2oFrequency: ''
+        h2oFrequency: '',
+        image:'',
     }
     const initialPlantList = []
     const initialDisabled = true
@@ -111,7 +112,7 @@ export default function PlantsHome(props) {
             nickname: newPlantFormValues.nickname.trim(),
             species: newPlantFormValues.species.trim(),
             h2oFrequency: newPlantFormValues.h2oFrequency.trim(),
-            image: newPlantFormValues.image,   
+            image: newPlantFormValues.image.trim(),  
         }
         postNewPlant(newPlant)
     }
@@ -130,7 +131,7 @@ export default function PlantsHome(props) {
                 <button onClick={openModal}>Add a New Plant</button>
             </div>
             <div class='myPlants-container'>
-                {myPlantList.map(plant => {
+                {plantList.map(plant => {
                     return (
                         <Plant key={plant.id} plantData={plant} />
                     )
