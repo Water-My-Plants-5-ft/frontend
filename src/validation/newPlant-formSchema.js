@@ -17,6 +17,7 @@ const formSchemaPlants = yup.object().shape({
         .required('watering schedule is required')
         .min(4, 'watering schedule must be at least 4 characters'),
     image: yup.string()
+        .oneOf(['plant1', 'plant2', 'plant3', 'plant4', 'plant5', 'plant6', 'plant7', 'plant8', 'plant9', 'plant10', 'plant11', 'plant12'], 'default plant image is required')
 })
 
 export default formSchemaPlants
