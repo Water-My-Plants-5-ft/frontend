@@ -27,6 +27,47 @@
 .App-link {
   color: #61dafb;
 }
+.App {
+  text-align: center;
+}
+
+.searchBox {
+  margin-bottom: 2%;
+  margin-top: 3%;
+  width: 50%;
+  margin-left: 25%;
+}
+/* .navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.navbar .navbar-nav {
+  text-align: right;
+}
+.navbar-dark {
+  background-color: #2e3842;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f6f7fb;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #47b3d4;
+} */
 
 @keyframes App-logo-spin {
   from {
