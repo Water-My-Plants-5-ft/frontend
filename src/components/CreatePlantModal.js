@@ -79,14 +79,14 @@ export default function CreatePlantModal(props) {
           <label>
             Watering Schedule:&nbsp;
             <input
-              value={values.h2oFrequency}
+              value={values.h2o_frequency}
               onChange={onChange}
-              name="h2oFrequency"
+              name="h2o_frequency"
               type="text"
-              id="h2oFrequency-input"
+              id="h2o_frequency-input"
             />
           </label>
-          <p>{errors.h2oFrequency}</p>
+          <p>{errors.h2o_frequency}</p>
         </div>
         <div>
           <p>Choose a Default Picture for Your Plant:&nbsp;</p>

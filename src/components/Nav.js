@@ -21,29 +21,17 @@ const Navigation = () => {
       {localStorage.getItem("token") ? (
         <Nav className="nav-links">
           <NavItem>
-            <NavLink
-              tag={Link}
-              to="/myaccount"
-              className={location.pathname === "/recipes" ? "active" : ""}
-            >
+            <NavLink tag={Link} to="/myaccount">
               My Account
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
-              tag={Link}
-              to="/editaccount"
-              className={location.pathname === "/recipes" ? "active" : ""}
-            >
+            <NavLink tag={Link} to="/editaccount">
               Edit Account
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
-              tag={Link}
-              to="/myplants"
-              className={location.pathname === "/addrecipe" ? "active" : ""}
-            >
+            <NavLink tag={Link} to="/myplants">
               My Plants
             </NavLink>
           </NavItem>
@@ -77,7 +65,7 @@ const Navigation = () => {
             <NavLink
               tag={Link}
               to="/signup"
-              className={location.pathname === "/registration" ? "active" : ""}
+              className={location.pathname === "/signup" ? "active" : ""}
             >
               Sign Up
             </NavLink>

@@ -9,6 +9,7 @@ import Signup from "./SignUp";
 import MyAccount from "./MyAccount";
 import EditAccount from "./EditAccount";
 import AddPlants from "./CreatePlantModal";
+import EditPlant from "./EditPlant";
 
 const initialDisabled = false;
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/myaccount" component={MyAccount} />
         <Route path="/editaccount" component={EditAccount} />
         <Route path="/addplants" component={AddPlants} />
+        <Route path="/editplant" component={EditPlant} />
         <Route path="/">
           <Home />
         </Route>
