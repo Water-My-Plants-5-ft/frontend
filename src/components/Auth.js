@@ -1,32 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { LockClosedIcon } from '@heroicons/react/solid';
+import React, { useEffect, useState } from "react";
+import { LockClosedIcon } from "@heroicons/react/solid";
 
 function Auth() {
-
-  const logo = 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=100&q=80';
-
+  const logo =
+    "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=100&q=80";
 
   const [tab, setTab] = useState(0); // 0 = sign in; 1 = register
   const [input, setInput] = useState({
-    email: '',
-    password: '',
-    name: '',
-    passwordConfirm: '',
+    email: "",
+    password: "",
+    name: "",
+    passwordConfirm: "",
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const { email, password } = input;
     //0 is sign in 1 is sign up//
     if (tab === 0) {
       //login post
-    }
-    else {
+    } else {
       //register post
     }
   };
@@ -39,9 +37,7 @@ function Auth() {
         /* -------------------------------------------------------------------------- */}
         <div className="profile-pic">
           <img className="" src={logo} alt="" />
-          <h2 className="">
-            Sign {tab === 0 ? 'in' : 'up'}
-          </h2>
+          <h2 className="">Sign {tab === 0 ? "in" : "up"}</h2>
         </div>
         <form className="" method="POST" onSubmit={handleSubmit}>
           {/* -------------------------------------------------------------------------- */
@@ -117,10 +113,7 @@ function Auth() {
           <div className="">
             {tab === 0 && (
               <div className="">
-                <button
-                  type="button"
-                  className=""
-                >
+                <button type="button" className="">
                   Forgot your password?
                 </button>
               </div>
@@ -131,24 +124,18 @@ function Auth() {
           /*                               SIGN IN/SIGN UP                              */
           /* -------------------------------------------------------------------------- */}
           <div>
-            <button
-              type="submit"
-              className="lockiconbutton"
-            >
+            <button type="submit" className="lockiconbutton">
               <span className="">
-                <LockClosedIcon
-                  className="closedlockicon"
-                  aria-hidden="true"
-                />
+                <LockClosedIcon className="closedlockicon" aria-hidden="true" />
               </span>
-              {tab === 0 ? 'Sign in' : 'Sign up'}
+              {tab === 0 ? "Sign in" : "Sign up"}
             </button>
           </div>
           {/* -------------------------------------------------------------------------- */
           /*                              NEED AN ACCOUNT?                              */
           /* -------------------------------------------------------------------------- */}
           <div className="text-sm">
-            {tab === 0 ? 'Need an account? ' : 'Have an account? '}
+            {tab === 0 ? "Need an account? " : "Have an account? "}
             <button
               type="button"
               onClick={() => {
@@ -156,7 +143,7 @@ function Auth() {
               }}
               className=""
             >
-              {tab === 0 ? 'Sign up' : 'Sign in'}
+              {tab === 0 ? "Sign up" : "Sign in"}
             </button>
           </div>
         </form>
