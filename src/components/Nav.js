@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { reach } from 'yup'
+import formSchemaPlants from '../validation/newPlant-formSchema.js'
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 
@@ -8,6 +10,13 @@ export default function Nav(props) {
     disabled,
     setDisabled
   } = props
+
+  const validate = (name, value) => {
+    reach(formSchemaPlants, name)
+      .validate(value)
+      .then(() => setNewPlantFormErrors({ ...newPlantFormErrors, [name]: '' }))
+      .catch(err => setNewPlantFormErrors({ ...newPlantFormErrors, [name]: err.errors[0] }))
+  }
 
   return (
     <div className='Login'>

@@ -84,12 +84,14 @@ h1.header{
 .plant-container{
   display: flex;
   flex-direction: column;
+  min-width: 26rem;
+  max-width: 26rem;
   align-items: center;
   padding-top: 1rem;
-  background-color: rgb(119, 148, 133);
+  background-color: rgb(143, 206, 175);
   border-radius: 10px;
   margin-bottom: 2rem;
-  
+  flex-shrink: 1
 }
 .plant-container img{
   width: 25rem;
@@ -118,10 +120,12 @@ h1.header{
   transform: translate(-50%, -50%);
   align-items: center;
   background-color: rgb(86, 160, 124);
+  padding: 2rem;
 }
 
 .avatar{
   width:100px;
   height: 100px;
+  margin-bottom: 2rem;
   border-radius: 50%;
 }

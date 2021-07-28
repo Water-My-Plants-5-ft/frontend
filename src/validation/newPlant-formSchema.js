@@ -19,4 +19,4 @@ const formSchemaPlants = yup.object().shape({
     image: yup.string()
 })
 
-export default formSchemaPlants
+export default formSchemaPlants;
