@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { reach } from 'yup'
+import formSchemaPlants from '../validation/newPlant-formSchema.js'
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import Auth from './Auth'
 
 
 export default function Nav(props) {
@@ -9,6 +12,7 @@ export default function Nav(props) {
     setDisabled
   } = props
 
+
   return (
     <div className='Login'>
       <nav>
@@ -16,29 +20,12 @@ export default function Nav(props) {
           <div className='nav-links'>
             <Link to='/'>Home</Link>
             <Link to='/myplants'>Plants</Link>
-            <Link id='sign-up' to='/sign-up'>Sign Up</Link>
             <button onClick={() => setDisabled(true)}>Login</button>
           </div>
         </h1>
       </nav>
       <Modal className='Modal' isOpen={disabled}>
-        <div className="randomname">
-          <img src="https://www.gardeningknowhow.com/wp-content/uploads/2011/07/plant.jpg" alt="Avatar" class="avatar" />
-        </div>
-        <label>Username&nbsp;
-          <input
-            name='username'
-            type='text'
-            id='nickname-input'
-          />
-        </label>
-        <label>Password&nbsp;
-          <input
-            name='password'
-            type='text'
-            id='nickname-input'
-          />
-        </label>
+        <Auth />
         <button onClick={() => setDisabled(false)}>Close Modal</button>
       </Modal>
     </div>
