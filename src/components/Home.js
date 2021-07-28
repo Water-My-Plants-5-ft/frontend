@@ -1,27 +1,45 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
+import React from "react";
+import { Jumbotron, Button } from "reactstrap";
+// import { Route, Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-export default function Home() {
-  const history = useHistory()
-  const routeToOrderForm = () => {
-    history.push('/login')
-  }
+const HomePage = () => {
+  const history = useHistory();
+  const handleClick = () => {
+    localStorage.getItem("token")
+      ? history.push("/items")
+      : history.push("/login");
+  };
 
   return (
-    <div className='home-wrapper'>
-      <div className='home-plants-image'>
-        <div>
-          <h2>
-            Watering your plants
-          </h2>
-          <p>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-          </p>
-          <button>
-            MyPlants
-          </button>
+    <div className="home-wrapper">
+      <div className="home-plants-image">
+        <div className="homepage">
+          <Jumbotron>
+            <div className="homePage">
+              <div className="content">
+                <h1 className="display-3">Hello, world!</h1>
+                <p className="lead">
+                  WaterMyPlants will remind users when it's time to feed that
+                  foliage and quench your plants' thirst.
+                </p>
+                <hr className="my-2" />
+                <p>
+                  Ensuring that all your plants are consistently watered is
+                  actually pretty difficult. Water My Plants is an app that
+                  helps to solve those problems.
+                </p>
+                <p className="lead">
+                  <Button onClick={handleClick} color="primary">
+                    Learn More!
+                  </Button>
+                </p>
+              </div>
+            </div>
+          </Jumbotron>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+export default HomePage;

@@ -8,64 +8,22 @@ import "../PlantsHome.css";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import { Container, Row, Col } from "reactstrap";
 import { SpinnerDiv, Spinner } from "../styled-components/spinner";
+import { useHistory } from "react-router";
+import { Button } from "reactstrap";
 
 // sample myPlantList
-const myPlantList = [
-  {
-    id: "0",
-    nickname: "Plant1",
-    species: "Species1",
-    h2o_frequency: "Every Monday",
-    image:
-      "https://images.unsplash.com/photo-1528563351349-844bf0482bf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "1",
-    nickname: "Plant2",
-    species: "Species2",
-    h2o_frequency: "Every Tuesday",
-    image:
-      "https://images.unsplash.com/photo-1528563351349-844bf0482bf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "2",
-    nickname: "Plant3",
-    species: "Species3",
-    h2o_frequency: "Every Wednesday",
-    image:
-      "https://images.unsplash.com/photo-1528563351349-844bf0482bf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "3",
-    nickname: "Plant4",
-    species: "Species4",
-    h2o_frequency: "Every Thursday",
-    image:
-      "https://images.unsplash.com/photo-1528563351349-844bf0482bf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "4",
-    nickname: "Plant5",
-    species: "Species5",
-    h2o_frequency: "Every Friday",
-    image:
-      "https://images.unsplash.com/photo-1528563351349-844bf0482bf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "5",
-    nickname: "Plant6",
-    species: "Species6",
-    h2o_frequency: "Every Saturday",
-    image:
-      "https://images.unsplash.com/photo-1528563351349-844bf0482bf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-  },
-];
 
 // End of sample MyPlantList
 const userID = window.localStorage.getItem("id");
-
+const initialValue = {
+  nickname: "",
+  species: "",
+  h2o_frequency: "",
+};
 export default function PlantsHome(props) {
   const [allPlants, setAllPlants] = useState([]);
+  const [item, setItem] = useState(initialValue);
+  const history = useHistory();
   // Modal States
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = () => {
@@ -178,8 +136,10 @@ export default function PlantsHome(props) {
     <div class="plantsHome-container">
       <div class="myPlants-header">
         <h2>My Plants</h2>
-        <button onClick={openModal}>Add a New Plant</button>
+        <Button onClick={openModal}>Add a New Plant</Button>
       </div>
+      <br />
+      <br />
       <Row>
         <div class="myPlants-container">
           {allPlants.map((plant) => {

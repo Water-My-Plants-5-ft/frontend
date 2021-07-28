@@ -29,7 +29,7 @@ const EditAccount = () => {
   const [formValues, setFormValues] = useState({
     username: "",
     password: "",
-    phone: "",
+    phone_number: "",
   });
   // const [alert, setAlert] = useState(false);
   const [error, setError] = useState("");
@@ -40,7 +40,7 @@ const EditAccount = () => {
       .get(`/users/${userID}`)
       .then((res) => {
         console.log(res);
-        // setFormValues(res.data);
+        setFormValues(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -89,10 +89,10 @@ const EditAccount = () => {
                     </div>
                     <div>
                       <Input
-                        value={formValues.phone}
+                        value={formValues.phone_number}
                         onChange={onChange}
-                        name="phone"
-                        type="phone"
+                        name="phone_number"
+                        type="phone_number"
                         placeholder="New Number"
                       />
                     </div>
