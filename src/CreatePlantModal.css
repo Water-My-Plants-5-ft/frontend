@@ -1,0 +1,13 @@
+h2 {
+    color:brown
+}
+.plantPicOptions-Container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.plantPicOption-Image{
+    height: 15vh;
+}
+
