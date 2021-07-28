@@ -9,11 +9,19 @@ export default function Home() {
 
   return (
     <div className='home-wrapper'>
-      <img
-        className='home-plants-image'
-        src='https://images.unsplash.com/photo-1551893665-f843f600794e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80'
-        alt="Succulents and Plants in Pots ready to be Watered"
-      />
+      <div className='home-plants-image'>
+        <div>
+          <h2>
+            Watering your plants
+          </h2>
+          <p>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+          </p>
+          <button>
+            MyPlants
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

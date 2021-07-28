@@ -63,6 +63,10 @@ code {
 
 /*Styles*/
 
+.App{
+  min-height: 100vh;
+}
+
 h1.header{
   display:flex;
   flex-direction: row;
@@ -77,8 +81,49 @@ h1.header{
   justify-content: space-between;
 }
 
+
+.closedlockicon{
+  width: 10px;
+}
+
+.auth-mod{
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  height: 50rem;
+  padding: 1rem;
+}
+
+.profile-pic{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-pic img{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
 .Modal{
   top: 20%;
+}
+
+.home-plants-image{
+  background-image: url("https://images.unsplash.com/photo-1493713838217-28e23b41b798?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2F0ZXJmYWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.plantsHome-container{
+  background-image: url("https://images.unsplash.com/photo-1551893665-f843f600794e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .plant-container{
