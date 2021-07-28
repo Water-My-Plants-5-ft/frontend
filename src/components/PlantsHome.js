@@ -131,7 +131,7 @@ export default function PlantsHome(props) {
                 <button onClick={openModal}>Add a New Plant</button>
             </div>
             <div class='myPlants-container'>
-                {myPlantList.map(plant => {
+                {plantList.map(plant => {
                     return (
                         <Plant key={plant.id} plantData={plant} />
                     )

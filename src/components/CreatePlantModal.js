@@ -88,9 +88,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant1'
+                                    value={plant1}
                                     onChange={onChange}
-                                    checked={values.image === 'plant1'}
+                                    checked={values.image === plant1}
                                     id='plant1'
                                 />
                                 <label
@@ -103,9 +103,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant2'
+                                    value={plant2}
                                     onChange={onChange}
-                                    checked={values.image === 'plant2'}
+                                    checked={values.image === plant2}
                                     id='plant2'
                                 />
                                 <label
@@ -118,9 +118,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant3'
+                                    value={plant3}
                                     onChange={onChange}
-                                    checked={values.image === 'plant3'}
+                                    checked={values.image === plant3}
                                     id='plant3'
                                 />
                                 <label
@@ -133,9 +133,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant4'
+                                    value={plant4}
                                     onChange={onChange}
-                                    checked={values.image === 'plant4'}
+                                    checked={values.image === plant4}
                                     id='plant4'
                                 />
                                 <label
@@ -148,9 +148,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant5'
+                                    value={plant5}
                                     onChange={onChange}
-                                    checked={values.image === 'plant5'}
+                                    checked={values.image === plant5}
                                     id='plant5'
                                 />
                                 <label
@@ -163,9 +163,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant6'
+                                    value={plant6}
                                     onChange={onChange}
-                                    checked={values.image === 'plant6'}
+                                    checked={values.image === plant6}
                                     id='plant6'
                                 />
                                 <label
@@ -178,9 +178,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant7'
+                                    value={plant7}
                                     onChange={onChange}
-                                    checked={values.image === 'plant7'}
+                                    checked={values.image === plant7}
                                     id='plant7'
                                 />
                                 <label
@@ -193,9 +193,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant8'
+                                    value={plant8}
                                     onChange={onChange}
-                                    checked={values.image === 'plant8'}
+                                    checked={values.image === plant8}
                                     id='plant8'
                                 />
                                 <label
@@ -208,9 +208,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant9'
+                                    value={plant9}
                                     onChange={onChange}
-                                    checked={values.image === 'plant9'}
+                                    checked={values.image === plant9}
                                     id='plant9'
                                 />
                                 <label
@@ -223,9 +223,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant10'
+                                    value={plant10}
                                     onChange={onChange}
-                                    checked={values.image === 'plant10'}
+                                    checked={values.image === plant10}
                                     id='plant10'
                                 />
                                 <label
@@ -238,9 +238,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant11'
+                                    value={plant11}
                                     onChange={onChange}
-                                    checked={values.image === 'plant11'}
+                                    checked={values.image === plant11}
                                     id='plant11'
                                 />
                                 <label
@@ -253,9 +253,9 @@ export default function CreatePlantModal(props) {
                                 <input
                                     type='radio'
                                     name='image'
-                                    value='plant12'
+                                    value={plant12}
                                     onChange={onChange}
-                                    checked={values.image === 'plant12'}
+                                    checked={values.image === plant12}
                                     id='plant12'
                                 />
                                 <label
