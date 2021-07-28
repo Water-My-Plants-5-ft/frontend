@@ -42,7 +42,7 @@ const MyAccount = (props) => {
     );
   else
     return (
-      <div>
+      <div class="plantsHome-container">
         <h1>Account Info</h1>
         <br />
         {/* {setId(localStorage.getItem("id"))} */}

@@ -13,7 +13,7 @@ const Navigation = () => {
   };
 
   return (
-    <Navbar>
+    <Navbar style={{ backgroundColor: "#207561" }} dark>
       <NavbarBrand tag={Link} to="/" className="mr-auto">
         Water My Plants
       </NavbarBrand>
@@ -39,7 +39,7 @@ const Navigation = () => {
             <NavLink
               tag={Link}
               to="/addplants"
-              className={location.pathname === "/addrecipe" ? "active" : ""}
+
             >
               Add Plants
             </NavLink>

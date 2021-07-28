@@ -65,7 +65,7 @@ const EditAccount = () => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
   return (
-    <div>
+    <div class="plantsHome-container">
       <Container>
         <br />
         <br />
