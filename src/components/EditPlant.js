@@ -71,52 +71,54 @@ const EditPlant = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col xs="12" md={{ size: 6, offset: 3 }}>
-          <FormContainer>
-            <h3>Edit Plant</h3>
-            <form onSubmit={submitHandler}>
-              <label>
-                Plant Name:
-                <Input
-                  name="nickname"
-                  value={item.nickname}
-                  onChange={onChange}
-                />
-              </label>
-              <label>
-                Species:
-                <Input
-                  name="species"
-                  type="text"
-                  value={item.species}
-                  onChange={onChange}
-                />
-              </label>
-              <br />
-              <label>
-                h2o_frequency:
-                <Input
-                  name="h2o_frequency"
-                  type="text"
-                  value={item.h2o_frequency}
-                  onChange={onChange}
-                />
-              </label>
-              <div>
-                <Button
-                  type="submit"
-                  // disabled={!item.nickname || !item.species}
-                >
-                  Edit Plant
-                </Button>
-              </div>
-            </form>
-          </FormContainer>
-        </Col>
-      </Row>
-    </Container>
+    <div class="plantsHome-container">
+      <Container>
+        <Row>
+          <Col xs="12" md={{ size: 6, offset: 3 }}>
+            <FormContainer>
+              <h3>Edit Plant</h3>
+              <form onSubmit={submitHandler}>
+                <label>
+                  Plant Name:
+                  <Input
+                    name="nickname"
+                    value={item.nickname}
+                    onChange={onChange}
+                  />
+                </label>
+                <label>
+                  Species:
+                  <Input
+                    name="species"
+                    type="text"
+                    value={item.species}
+                    onChange={onChange}
+                  />
+                </label>
+                <br />
+                <label>
+                  h2o_frequency:
+                  <Input
+                    name="h2o_frequency"
+                    type="text"
+                    value={item.h2o_frequency}
+                    onChange={onChange}
+                  />
+                </label>
+                <div>
+                  <Button
+                    type="submit"
+                    // disabled={!item.nickname || !item.species}
+                  >
+                    Edit Plant
+                  </Button>
+                </div>
+              </form>
+            </FormContainer>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

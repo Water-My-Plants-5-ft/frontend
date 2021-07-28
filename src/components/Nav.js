@@ -13,7 +13,7 @@ const Navigation = () => {
   };
 
   return (
-    <Navbar>
+    <Navbar style={{ backgroundColor: "#207561" }} dark>
       <NavbarBrand tag={Link} to="/" className="mr-auto">
         Water My Plants
       </NavbarBrand>

@@ -29,7 +29,7 @@ function App() {
         <Route path="/myaccount" component={MyAccount} />
         <Route path="/editaccount" component={EditAccount} />
         <Route path="/addplants" component={AddPlants} />
-        <Route path="/editplant" component={EditPlant} />
+        <Route path="/editplant/:id" component={EditPlant} />
         <Route path="/">
           <Home />
         </Route>

@@ -51,12 +51,46 @@ h1.header {
   top: 20%;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.navbar .navbar-nav {
+  text-align: right;
+}
+.navbar-dark {
+  background-color: #2e3842;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f6f7fb;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #47b3d4;
+}
+
 .home-plants-image {
   background-image: url("https://images.unsplash.com/photo-1493713838217-28e23b41b798?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2F0ZXJmYWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.479);
+  background-blend-mode: lighten;
 }
 .plantsHome-container {
   background-image: url("https://images.unsplash.com/photo-1551893665-f843f600794e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
@@ -64,6 +98,9 @@ h1.header {
   background-position: center;
   background-size: cover;
   min-height: 100vh;
+
+  background-color: rgba(255, 255, 255, 0.699);
+  background-blend-mode: lighten;
 }
 
 .plant-container {
