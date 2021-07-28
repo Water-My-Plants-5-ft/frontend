@@ -1,33 +1,91 @@
-import React, { useState } from 'react'
-import { reach } from 'yup'
-import formSchemaPlants from '../validation/newPlant-formSchema.js'
-import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
-import Auth from './Auth'
+import React from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 
+const Navigation = () => {
+  const history = useHistory();
+  const location = useLocation();
 
-export default function Nav(props) {
-  const {
-    disabled,
-    setDisabled
-  } = props
-
+  const logout = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    history.push("/login");
+  };
 
   return (
-    <div className='Login'>
-      <nav>
-        <h1 className='header'>Water My Plants
-          <div className='nav-links'>
-            <Link to='/'>Home</Link>
-            <Link to='/myplants'>Plants</Link>
-            <button onClick={() => setDisabled(true)}>Login</button>
-          </div>
-        </h1>
-      </nav>
-      <Modal className='Modal' isOpen={disabled}>
-        <Auth />
-        <button onClick={() => setDisabled(false)}>Close Modal</button>
-      </Modal>
-    </div>
+    <Navbar>
+      <NavbarBrand tag={Link} to="/" className="mr-auto">
+        Water My Plants
+      </NavbarBrand>
+
+      {localStorage.getItem("token") ? (
+        <Nav className="nav-links">
+          <NavItem>
+            <NavLink
+              tag={Link}
+              to="/myaccount"
+              className={location.pathname === "/recipes" ? "active" : ""}
+            >
+              My Account
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              tag={Link}
+              to="/editaccount"
+              className={location.pathname === "/recipes" ? "active" : ""}
+            >
+              Edit Account
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              tag={Link}
+              to="/myplants"
+              className={location.pathname === "/addrecipe" ? "active" : ""}
+            >
+              My Plants
+            </NavLink>
+          </NavItem>
+          {/* <NavItem>
+            <NavLink
+              tag={Link}
+              to="/addplants"
+              className={location.pathname === "/addrecipe" ? "active" : ""}
+            >
+              Add Plants
+            </NavLink>
+          </NavItem> */}
+          <NavItem onClick={logout}>
+            <NavLink tag={Link} to="#">
+              Log Out
+            </NavLink>
+          </NavItem>
+        </Nav>
+      ) : (
+        <Nav className="nav-links">
+          <NavItem>
+            <NavLink
+              tag={Link}
+              to="/login"
+              className={location.pathname === "/login" ? "active" : ""}
+            >
+              Log In
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              tag={Link}
+              to="/signup"
+              className={location.pathname === "/registration" ? "active" : ""}
+            >
+              Sign Up
+            </NavLink>
+          </NavItem>
+        </Nav>
+      )}
+    </Navbar>
   );
-}
+};
+
+export default Navigation;

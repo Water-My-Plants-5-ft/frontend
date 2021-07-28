@@ -1,92 +1,28 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /*Styles*/
 
-.App{
+/* .App {
   min-height: 100vh;
-}
+} */
 
-h1.header{
-  display:flex;
+h1.header {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: rgb(86, 160, 124);
   padding: 1em 4em;
 }
 
-.nav-links{
+/* .nav-links {
   display: flex;
   width: 15em;
   justify-content: space-between;
-}
+} */
 
-
-.closedlockicon{
+.closedlockicon {
   width: 10px;
 }
 
-.auth-mod{
+.auth-mod {
   display: flex;
   justify-content: center;
   width: 20rem;
@@ -94,31 +30,31 @@ h1.header{
   padding: 1rem;
 }
 
-.profile-pic{
+.profile-pic {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.profile-pic img{
+.profile-pic img {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
 }
 
-.Modal{
+.Modal {
   top: 20%;
 }
 
-.home-plants-image{
+.home-plants-image {
   background-image: url("https://images.unsplash.com/photo-1493713838217-28e23b41b798?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2F0ZXJmYWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 100vh;
 }
-.plantsHome-container{
+.plantsHome-container {
   background-image: url("https://images.unsplash.com/photo-1551893665-f843f600794e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
   background-repeat: no-repeat;
   background-position: center;
@@ -126,7 +62,7 @@ h1.header{
   min-height: 100vh;
 }
 
-.plant-container{
+.plant-container {
   display: flex;
   flex-direction: column;
   min-width: 26rem;
@@ -136,15 +72,15 @@ h1.header{
   background-color: rgb(143, 206, 175);
   border-radius: 10px;
   margin-bottom: 2rem;
-  flex-shrink: 1
+  flex-shrink: 1;
 }
-.plant-container img{
+.plant-container img {
   width: 25rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.plant-info-container{
+.plant-info-container {
   background-color: gray;
   width: 23rem;
   padding: 1rem;
@@ -153,7 +89,7 @@ h1.header{
   border-bottom-right-radius: 10px;
 }
 
-.Modal{
+.Modal {
   display: flex;
   flex-direction: column;
   height: 20rem;
@@ -168,8 +104,8 @@ h1.header{
   padding: 2rem;
 }
 
-.avatar{
-  width:100px;
+.avatar {
+  width: 100px;
   height: 100px;
   margin-bottom: 2rem;
   border-radius: 50%;
