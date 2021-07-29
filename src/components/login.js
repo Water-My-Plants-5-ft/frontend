@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Button } from "reactstrap";
 
 const Error = styled.h4`
   color: red;
