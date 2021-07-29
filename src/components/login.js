@@ -57,48 +57,50 @@ const Login = () => {
   };
 
   return (
-    <Container>
-      <div className="Login">
-        <FormContainer>
-          <form onSubmit={handleSubmit}>
-            <Form.Group size="lg">
-              <h2>Login</h2>
+    <div class="plantsHome-container">
+      <Container>
+        <div className="Login">
+          <FormContainer>
+            <form onSubmit={handleSubmit}>
+              <Form.Group size="lg">
+                <h2>Login</h2>
+                <br />
+                <br />
+                <Form.Label>Username</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="username"
+                  id="username-field"
+                  placeholder="Username"
+                  value={userInfo.username}
+                  onChange={handleChange}
+                />
+              </Form.Group>
+              <Form.Group size="lg">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  id="password-field"
+                  placeholder="Password"
+                  value={userInfo.password}
+                  onChange={handleChange}
+                />
+              </Form.Group>
               <br />
               <br />
-              <Form.Label>Username</Form.Label>
-              <Form.Control
-                type="text"
-                name="username"
-                id="username-field"
-                placeholder="Username"
-                value={userInfo.username}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group size="lg">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                name="password"
-                id="password-field"
-                placeholder="Password"
-                value={userInfo.password}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <br />
-            <br />
 
-            <Button block size="lg" type="submit">
-              Login
-            </Button>
-            <br />
-            <br />
-            <Error> {err}</Error>
-          </form>
-        </FormContainer>
-      </div>
-    </Container>
+              <Button block size="lg" type="submit">
+                Login
+              </Button>
+              <br />
+              <br />
+              <Error> {err}</Error>
+            </form>
+          </FormContainer>
+        </div>
+      </Container>
+    </div>
   );
 };
 
