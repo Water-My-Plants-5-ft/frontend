@@ -1,6 +1,6 @@
 /*Styles*/
 
-/* .App {
+.App {
   background-image: url("https://images.unsplash.com/photo-1493713838217-28e23b41b798?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2F0ZXJmYWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
   background-repeat: no-repeat;
   background-position: center;
@@ -98,9 +98,51 @@ a {
   background-position: center;
   background-size: cover;
   min-height: 100vh;
+}
+.my-account-container1{
+  display: flex;
+  margin-top: 15%;
+  margin-left: 50%;
+  border-radius: 5%;
+  padding: 7px;
+  background-color: #207561;
+}
+.my-account-container2{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 30rem;
+  border-radius: 5%;
+  background-color: #97d6c7;
+}
+.edit-account-home-container{
+  display: flex;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1551893665-f843f600794e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2em;
+}
+.edit-account-container1{
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  width: 30em;
+  margin-top: 8%;
+  border-radius: 5%;
+  padding: 7px;
+  background-color: #207561;
+}
 
-  background-color: rgba(255, 255, 255, 0.705);
-  background-blend-mode: lighten;
+.edit-account-container2{
+  display: flex;
+  padding: 2em;
+  height: 29rem;
+  flex-direction: column;
+  border-radius: 5%;
+  background-color: #97d6c7;
 }
 
 .plant-container {
@@ -166,3 +208,6 @@ button {
   outline: none;
   -webkit-appearance: none;
 }
+
+/*Account Info*/
+

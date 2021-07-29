@@ -50,34 +50,38 @@ const MyAccount = (props) => {
     return (
       <div class="plantsHome-container">
         <FormContainer>
-          <h1>Account Info</h1>
-          <br />
-          {/* {setId(localStorage.getItem("id"))} */}
-          {/* {setId(JSON.parse(localStorage.getItem("id")))} */}
-          <br />
-          <div>
-            <br />
-            <br />
-            <div className="title">
-              <h2>Username: {formValues.username}</h2>
-            </div>
-            <br />
-            {/* {setId(JSON.parse(userID))} */}
-            <br />
-            <div className="title">
-              <h2>Phone #: {formValues.phone_number}</h2>
-            </div>
-            <br />
-            <br />
-            <div className="title">
-              <h2>user id: {userID}</h2>
-            </div>
-            <br />
-            <br />
+          <div class="my-account-container1">
+            <div class="my-account-container2">
+              <h1>Account Info</h1>
+              <br />
+              {/* {setId(localStorage.getItem("id"))} */}
+              {/* {setId(JSON.parse(localStorage.getItem("id")))} */}
+              <br />
+              <div>
+                <br />
+                <br />
+                <div className="title">
+                  <h2>Username: {formValues.username}</h2>
+                </div>
+                <br />
+                {/* {setId(JSON.parse(userID))} */}
+                <br />
+                <div className="title">
+                  <h2>Phone #: {formValues.phone_number}</h2>
+                </div>
+                <br />
+                <br />
+                <div className="title">
+                  <h2>user id: {userID}</h2>
+                </div>
+                <br />
+                <br />
 
-            <h2>
-              Password: <Badge color="secondary"> 🤫 🤐 😶</Badge>
-            </h2>
+                <h2>
+                  Password: <Badge color="secondary"> 🤫 🤐 😶</Badge>
+                </h2>
+              </div>
+            </div>
           </div>
         </FormContainer>
       </div>
