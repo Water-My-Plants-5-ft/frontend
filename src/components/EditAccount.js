@@ -65,55 +65,48 @@ const EditAccount = () => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
   return (
-    <div class="plantsHome-container">
-      <Container>
-        <br />
-        <br />
-
-        <Error>{error} </Error>
-        <Row>
-          <Col xs="12" md={{ size: 6, offset: 3 }}>
-            <h1>Edit Account</h1>
-            <FormContainer>
-              <div>
+    <div class="edit-account-home-container">
+      <Error>{error} </Error>
+      <div class="edit-account-container1">
+        <div class="edit-account-container2">
+          <h1>Edit Account</h1>
+          <div>
+            <div>
+              <form onSubmit={onSubmit}>
                 <div>
-                  <form onSubmit={onSubmit}>
-                    <div>
-                      <Input
-                        value={formValues.username}
-                        onChange={onChange}
-                        name="username"
-                        type="text"
-                        placeholder="New Username"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        value={formValues.phone_number}
-                        onChange={onChange}
-                        name="phone_number"
-                        type="phone_number"
-                        placeholder="New Number"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        value={formValues.password}
-                        onChange={onChange}
-                        name="password"
-                        type="password"
-                        placeholder="New Password"
-                      />
-                    </div>
-
-                    <Button type="submit">Save Changes!</Button>
-                  </form>
+                  <Input
+                    value={formValues.username}
+                    onChange={onChange}
+                    name="username"
+                    type="text"
+                    placeholder="New Username"
+                  />
                 </div>
-              </div>
-            </FormContainer>
-          </Col>
-        </Row>
-      </Container>
+                <div>
+                  <Input
+                    value={formValues.phone_number}
+                    onChange={onChange}
+                    name="phone_number"
+                    type="phone_number"
+                    placeholder="New Number"
+                  />
+                </div>
+                <div>
+                  <Input
+                    value={formValues.password}
+                    onChange={onChange}
+                    name="password"
+                    type="password"
+                    placeholder="New Password"
+                  />
+                </div>
+
+                <Button type="submit">Save Changes!</Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

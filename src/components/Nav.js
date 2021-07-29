@@ -15,7 +15,7 @@ const Navigation = () => {
   return (
     <Navbar style={{ backgroundColor: "#207561" }} dark>
       <NavbarBrand tag={Link} to="/" className="mr-auto">
-        Water My Plants
+        <img src="art/wmplogo.png" />
       </NavbarBrand>
 
       {localStorage.getItem("token") ? (
