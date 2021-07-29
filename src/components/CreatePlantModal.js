@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "../CreatePlantModal.css";
-import styled from "styled-components";
-import { Container, Row, Col, Button } from "reactstrap";
+// import styled from "styled-components";
+// import { Container, Row, Col, Button } from "reactstrap";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 import plant1 from "../assets/newplantoptions/plant1.jpg";
 import plant2 from "../assets/newplantoptions/plant2.jpg";
 import plant3 from "../assets/newplantoptions/plant3.jpg";
@@ -28,12 +28,11 @@ const initialValue = {
 };
 
 export default function CreatePlantModal(props) {
-  const { values, change, submit, disabled, errors, modalIsOpen, closeModal } =
-    props;
+  const { change, errors, modalIsOpen, closeModal } = props;
 
   // Modal States
   const [item, setItem] = useState(initialValue);
-  const history = useHistory();
+  // const history = useHistory();
 
   Modal.setAppElement("#root");
 

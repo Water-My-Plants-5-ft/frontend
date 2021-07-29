@@ -6,24 +6,24 @@ import Plant from "./Plant";
 import CreatePlantModal from "./CreatePlantModal";
 import "../PlantsHome.css";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import { SpinnerDiv, Spinner } from "../styled-components/spinner";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 import { Button } from "reactstrap";
 
 // sample myPlantList
 
 // End of sample MyPlantList
 const userID = window.localStorage.getItem("id");
-const initialValue = {
-  nickname: "",
-  species: "",
-  h2o_frequency: "",
-};
+// const initialValue = {
+//   nickname: "",
+//   species: "",
+//   h2o_frequency: "",
+// };
 export default function PlantsHome(props) {
   const [allPlants, setAllPlants] = useState([]);
-  const [item, setItem] = useState(initialValue);
-  const history = useHistory();
+  // const [item, setItem] = useState(initialValue);
+  // const history = useHistory();
   // Modal States
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = () => {
@@ -132,34 +132,43 @@ export default function PlantsHome(props) {
       .then((valid) => setDisabled(!valid));
   }, [newPlantFormValues]);
 
-  return (
-    <div class="plantsHome-container">
-      <div class="myPlants-header">
-        <h2>My Plants</h2>
-        <Button onClick={openModal}>Add a New Plant</Button>
-      </div>
-      <br />
-      <br />
-      <Row>
-        <div class="myPlants-container">
-          {allPlants.map((plant) => {
-            return (
-              <Col xs="12" sm="6" md="4" key={plant.id}>
-                <Plant plant={plant} />
-              </Col>
-            );
-          })}
+  const gotPlantList = allPlants.length !== 0 ? true : false;
+
+  if (!gotPlantList)
+    return (
+      <SpinnerDiv>
+        <Spinner color="danger" />
+      </SpinnerDiv>
+    );
+  else if (gotPlantList)
+    return (
+      <div className="plantsHome-container">
+        <div className="myPlants-header">
+          <h2>My Plants</h2>
+          <Button onClick={openModal}>Add a New Plant</Button>
         </div>
-      </Row>
-      <CreatePlantModal
-        values={newPlantFormValues}
-        change={inputChange}
-        submit={formSubmitNewPlant}
-        disabled={disabled}
-        errors={newPlantFormErrors}
-        modalIsOpen={modalIsOpen}
-        closeModal={closeModal}
-      />
-    </div>
-  );
+        <br />
+        <br />
+        <Row>
+          <div className="myPlants-container">
+            {allPlants.map((plant) => {
+              return (
+                <Col xs="12" sm="6" md="4" key={plant.id}>
+                  <Plant plant={plant} />
+                </Col>
+              );
+            })}
+          </div>
+        </Row>
+        <CreatePlantModal
+          values={newPlantFormValues}
+          change={inputChange}
+          submit={formSubmitNewPlant}
+          disabled={disabled}
+          errors={newPlantFormErrors}
+          modalIsOpen={modalIsOpen}
+          closeModal={closeModal}
+        />
+      </div>
+    );
 }

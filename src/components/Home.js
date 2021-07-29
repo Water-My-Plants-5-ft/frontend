@@ -7,7 +7,7 @@ const HomePage = () => {
   const history = useHistory();
   const handleClick = () => {
     localStorage.getItem("token")
-      ? history.push("/items")
+      ? history.push("/myplants")
       : history.push("/login");
   };
 

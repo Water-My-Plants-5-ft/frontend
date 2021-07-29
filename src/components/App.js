@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
-import PlantsHome from "./PlantsHome";
+
 import Nav from "./Nav";
 import Login from "./login";
 import MyPlants from "./PlantsHome";
