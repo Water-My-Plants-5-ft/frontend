@@ -89,7 +89,7 @@ a {
   background-position: center;
   background-size: cover;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.479);
+  background-color: rgba(255, 255, 255, 0.719);
   background-blend-mode: lighten;
 }
 .plantsHome-container {
@@ -99,7 +99,7 @@ a {
   background-size: cover;
   min-height: 100vh;
 
-  background-color: rgba(255, 255, 255, 0.699);
+  background-color: rgba(255, 255, 255, 0.705);
   background-blend-mode: lighten;
 }
 

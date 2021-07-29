@@ -10,7 +10,6 @@ const Error = styled.h4`
   color: red;
 `;
 const FormContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
