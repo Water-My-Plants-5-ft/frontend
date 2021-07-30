@@ -10,6 +10,7 @@ import MyAccount from "./MyAccount";
 import EditAccount from "./EditAccount";
 import AddPlants from "./CreatePlantModal";
 import EditPlant from "./EditPlant";
+import Footer from "./footer";
 
 const initialDisabled = false;
 
@@ -34,6 +35,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

@@ -18,28 +18,31 @@ const HomePage = () => {
           <Jumbotron>
             <div className="homePage">
               <div className="content">
-                <h1 className="display-3">Hello, world!</h1>
-                <p className="lead">
-                  WaterMyPlants will remind users when it's time to feed that
-                  foliage and quench your plants' thirst.
-                </p>
-                <hr className="my-2" />
-                <p>
-                  Ensuring that all your plants are consistently watered is
-                  actually pretty difficult. Water My Plants is an app that
-                  helps to solve those problems.
-                </p>
-                <p className="lead">
-                  <Button onClick={handleClick} color="primary">
-                    Learn More!
-                  </Button>
-                </p>
+                <div className='company-name-img-container'>
+                  <h1 className="display-3">Company Name</h1>
+                  <img id="homepage-mid-img" src='https://www.ugaoo.com/knowledge-center/wp-content/uploads/2016/03/shutterstock_226079392-850x525.jpg' alt='Watering plant' />
+                  <p className="lead">
+                    WaterMyPlants will remind users when it's time to feed that
+                    foliage and quench your plants' thirst.
+                  </p>
+                  <hr className="my-2" />
+                  <p>
+                    Ensuring that all your plants are consistently watered is
+                    actually pretty difficult. Water My Plants is an app that
+                    helps to solve those problems.
+                  </p>
+                  <p className="lead">
+                    <Button onClick={handleClick} color="primary">
+                      Learn More!
+                    </Button>
+                  </p>
+                </div>
               </div>
             </div>
           </Jumbotron>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 export default HomePage;
