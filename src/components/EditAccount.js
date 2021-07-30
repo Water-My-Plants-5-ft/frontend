@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Button } from "reactstrap";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
-const FormContainer = styled.div`
-  margin-top: 150px;
-  width: 100%;
-`;
+// const FormContainer = styled.div`
+//   margin-top: 150px;
+//   width: 100%;
+// `;
 
 const Input = styled.input`
   width: 100%;
@@ -65,10 +65,10 @@ const EditAccount = () => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
   return (
-    <div class="edit-account-home-container">
+    <div className="edit-account-home-container">
       <Error>{error} </Error>
-      <div class="edit-account-container1">
-        <div class="edit-account-container2">
+      <div className="edit-account-container1">
+        <div className="edit-account-container2">
           <h1>Edit Account</h1>
           <div>
             <div>

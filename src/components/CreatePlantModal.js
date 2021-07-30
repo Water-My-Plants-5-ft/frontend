@@ -135,7 +135,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant1}
                 id="plant1"
               />
-              <label for="plant1" id="plantPic1">
+              <label htmlFor="plant1" id="plantPic1">
                 <img
                   src={plant1}
                   alt="plant1"
@@ -152,7 +152,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant2}
                 id="plant2"
               />
-              <label for="plant2" id="plantPic2">
+              <label htmlFor="plant2" id="plantPic2">
                 <img
                   src={plant2}
                   alt="plant2"
@@ -169,7 +169,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant3}
                 id="plant3"
               />
-              <label for="plant3" id="plantPic3">
+              <label htmlFor="plant3" id="plantPic3">
                 <img
                   src={plant3}
                   alt="plant3"
@@ -186,7 +186,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant4}
                 id="plant4"
               />
-              <label for="plant4" id="plantPic4">
+              <label htmlFor="plant4" id="plantPic4">
                 <img
                   src={plant4}
                   alt="plant4"
@@ -203,7 +203,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant5}
                 id="plant5"
               />
-              <label for="plant5" id="plantPic5">
+              <label htmlFor="plant5" id="plantPic5">
                 <img
                   src={plant5}
                   alt="plant5"
@@ -220,7 +220,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant6}
                 id="plant6"
               />
-              <label for="plant6" id="plantPic6">
+              <label htmlFor="plant6" id="plantPic6">
                 <img
                   src={plant6}
                   alt="plant6"
@@ -237,7 +237,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant7}
                 id="plant7"
               />
-              <label for="plant7" id="plantPic7">
+              <label htmlFor="plant7" id="plantPic7">
                 <img
                   src={plant7}
                   alt="plant7"
@@ -254,7 +254,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant8}
                 id="plant8"
               />
-              <label for="plant8" id="plantPic8">
+              <label htmlFor="plant8" id="plantPic8">
                 <img
                   src={plant8}
                   alt="plant8"
@@ -271,7 +271,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant9}
                 id="plant9"
               />
-              <label for="plant9" id="plantPic9">
+              <label htmlFor="plant9" id="plantPic9">
                 <img
                   src={plant9}
                   alt="plant9"
@@ -288,7 +288,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant10}
                 id="plant10"
               />
-              <label for="plant10" id="plantPic10">
+              <label htmlFor="plant10" id="plantPic10">
                 <img
                   src={plant10}
                   alt="plant10"
@@ -305,7 +305,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant11}
                 id="plant11"
               />
-              <label for="plant11" id="plantPic11">
+              <label htmlFor="plant11" id="plantPic11">
                 <img
                   src={plant11}
                   alt="plant11"
@@ -322,7 +322,7 @@ export default function CreatePlantModal(props) {
                 checked={item.image === plant12}
                 id="plant12"
               />
-              <label for="plant12" id="plantPic12">
+              <label htmlFor="plant12" id="plantPic12">
                 <img
                   src={plant12}
                   alt="plant12"
