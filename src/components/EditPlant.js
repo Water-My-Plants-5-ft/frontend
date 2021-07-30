@@ -108,7 +108,7 @@ const EditPlant = () => {
                 <div>
                   <Button
                     type="submit"
-                    // disabled={!item.nickname || !item.species}
+                  // disabled={!item.nickname || !item.species}
                   >
                     Edit Plant
                   </Button>

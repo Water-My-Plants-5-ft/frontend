@@ -40,7 +40,7 @@ const EditAccount = () => {
       .get(`/users/${userID}`)
       .then((res) => {
         console.log(res);
-        setFormValues(res.data);
+        setFormValues({ ...res.data, password: "" });
       })
       .catch((err) => {
         console.log(err);
@@ -87,7 +87,7 @@ const EditAccount = () => {
                     value={formValues.phone_number}
                     onChange={onChange}
                     name="phone_number"
-                    type="phone_number"
+                    type="number"
                     placeholder="New Number"
                   />
                 </div>
