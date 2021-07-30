@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import navlogo from "./art/wmplogo.png";
 
 const Navigation = () => {
   const history = useHistory();
@@ -15,7 +16,7 @@ const Navigation = () => {
   return (
     <Navbar style={{ backgroundColor: "#207561" }} dark>
       <NavbarBrand tag={Link} to="/" className="mr-auto">
-        <img src="art/wmplogo.png" />
+        <img src={navlogo} alt='Awesome Logo' id="logo-nav" />
       </NavbarBrand>
 
       {localStorage.getItem("token") ? (

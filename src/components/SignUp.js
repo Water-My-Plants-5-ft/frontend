@@ -63,57 +63,53 @@ const SignupPage = () => {
   // }, [formValues]);
 
   return (
-    <div class="plantsHome-container">
-      <Container>
-        <Row>
-          <Col xs="12" md={{ size: 6, offset: 3 }}>
-            <FormContainer>
-              <div className="signup-form">
-                <h2>Create an account, then sign in!</h2>
-                <br />
-                <br />
+    <div class="edit-account-home-container">
+      <div class="edit-account-container1">
+        <div class="edit-account-container2">
+          <div className="signup-form">
+            <h2>Create an account, then sign in!</h2>
+            <br />
+            <br />
+
+            <div>
+              <form onSubmit={onSubmit}>
+                <div>
+                  <Input
+                    value={formValues.username}
+                    onChange={onChange}
+                    name="username"
+                    type="text"
+                    placeholder="Username"
+                  />
+                </div>
 
                 <div>
-                  <form onSubmit={onSubmit}>
-                    <div>
-                      <Input
-                        value={formValues.username}
-                        onChange={onChange}
-                        name="username"
-                        type="text"
-                        placeholder="Username"
-                      />
-                    </div>
-
-                    <div>
-                      <Input
-                        value={formValues.phone_number}
-                        onChange={onChange}
-                        name="phone_number"
-                        type="text"
-                        placeholder="Phone Number"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        value={formValues.password}
-                        onChange={onChange}
-                        name="password"
-                        type="password"
-                        placeholder="Password"
-                      />
-                    </div>
-                    <div></div>
-                    <Button type="submit">Sign Up!</Button>
-                    <div></div>
-                  </form>
+                  <Input
+                    value={formValues.phone_number}
+                    onChange={onChange}
+                    name="phone_number"
+                    type="text"
+                    placeholder="Phone Number"
+                  />
                 </div>
-              </div>
-            </FormContainer>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                <div>
+                  <Input
+                    value={formValues.password}
+                    onChange={onChange}
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div></div>
+                <Button type="submit">Sign Up!</Button>
+                <div></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div >
   );
 };
 
