@@ -56,9 +56,9 @@ const Login = () => {
   };
 
   return (
-    <div class="login-form-container">
-      <div class="login-account-container1">
-        <div class="login-account-container2">
+    <div className="login-form-container">
+      <div className="login-account-container1">
+        <div className="login-account-container2">
           <div className="Login">
             <FormContainer>
 

@@ -63,9 +63,9 @@ const SignupPage = () => {
   // }, [formValues]);
 
   return (
-    <div class="edit-account-home-container">
-      <div class="edit-account-container1">
-        <div class="edit-account-container2">
+    <div className="edit-account-home-container">
+      <div className="edit-account-container1">
+        <div className="edit-account-container2">
           <div className="signup-form">
             <h2>Create an account, then sign in!</h2>
             <br />

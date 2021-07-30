@@ -40,7 +40,7 @@ const EditAccount = () => {
       .get(`/users/${userID}`)
       .then((res) => {
         console.log(res);
-        setFormValues(res.data);
+        setFormValues({ ...res.data, password: "" });
       })
       .catch((err) => {
         console.log(err);
@@ -65,10 +65,10 @@ const EditAccount = () => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
   return (
-    <div class="edit-account-home-container">
+    <div className="edit-account-home-container">
       <Error>{error} </Error>
-      <div class="edit-account-container1">
-        <div class="edit-account-container2">
+      <div className="edit-account-container1">
+        <div className="edit-account-container2">
           <h1>Edit Account</h1>
           <div>
             <div>
@@ -87,7 +87,7 @@ const EditAccount = () => {
                     value={formValues.phone_number}
                     onChange={onChange}
                     name="phone_number"
-                    type="phone_number"
+                    type="number"
                     placeholder="New Number"
                   />
                 </div>

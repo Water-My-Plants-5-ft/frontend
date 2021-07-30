@@ -74,7 +74,7 @@ export default function CreatePlantModal(props) {
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      class="create-plant-modal"
+      className="create-plant-modal"
       contentLabel="Add a New Plant Modal"
     >
       <h2>Create a New Plant</h2>

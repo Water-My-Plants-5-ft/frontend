@@ -71,7 +71,7 @@ const EditPlant = () => {
   };
 
   return (
-    <div class="plantsHome-container">
+    <div className="plantsHome-container">
       <Container>
         <Row>
           <Col xs="12" md={{ size: 6, offset: 3 }}>
@@ -108,7 +108,7 @@ const EditPlant = () => {
                 <div>
                   <Button
                     type="submit"
-                    // disabled={!item.nickname || !item.species}
+                  // disabled={!item.nickname || !item.species}
                   >
                     Edit Plant
                   </Button>
