@@ -48,10 +48,10 @@ const MyAccount = (props) => {
     );
   else
     return (
-      <div class="plantsHome-container">
+      <div className="plantsHome-container">
         <FormContainer>
-          <div class="my-account-container1">
-            <div class="my-account-container2">
+          <div className="my-account-container1">
+            <div className="my-account-container2">
               <h1>Account Info</h1>
               <br />
               {/* {setId(localStorage.getItem("id"))} */}

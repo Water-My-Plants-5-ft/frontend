@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { Container, Button } from "reactstrap";
+import { Button } from "reactstrap";
 
 const Error = styled.h4`
   color: red;
@@ -56,12 +56,11 @@ const Login = () => {
   };
 
   return (
-    <div class="login-form-container">
-      <div class="login-account-container1">
-        <div class="login-account-container2">
+    <div className="login-form-container">
+      <div className="login-account-container1">
+        <div className="login-account-container2">
           <div className="Login">
             <FormContainer>
-
               <form onSubmit={handleSubmit}>
                 <Form.Group size="lg">
                   <h2>Login</h2>

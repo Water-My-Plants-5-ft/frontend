@@ -3,13 +3,13 @@ import React, { useState } from "react";
 // import schema from "../Components/validation/registrationSchema.js";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Button } from "reactstrap";
 import styled from "styled-components";
 
-const FormContainer = styled.div`
-  margin-top: 150px;
-  width: 100%;
-`;
+// const FormContainer = styled.div`
+//   margin-top: 150px;
+//   width: 100%;
+// `;
 
 const Input = styled.input`
   width: 100%;
@@ -63,9 +63,9 @@ const SignupPage = () => {
   // }, [formValues]);
 
   return (
-    <div class="edit-account-home-container">
-      <div class="edit-account-container1">
-        <div class="edit-account-container2">
+    <div className="edit-account-home-container">
+      <div className="edit-account-container1">
+        <div className="edit-account-container2">
           <div className="signup-form">
             <h2>Create an account, then sign in!</h2>
             <br />
@@ -109,7 +109,7 @@ const SignupPage = () => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
