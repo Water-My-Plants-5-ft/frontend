@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 /*Styles*/
 
 .App {
@@ -72,8 +73,16 @@ a {
   justify-content: space-between;
 }
 
-#logo-nav{
+#logo-nav-favicons{
   height: 4rem;
+}
+
+#logo-nav{
+  height: 5rem;
+}
+
+#logo-footer{
+  height: 100%;
 }
 
 .nav-links a {
@@ -93,11 +102,21 @@ a {
   background-position: center;
   background-size: cover;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.719);
   background-blend-mode: lighten;
 }
 .company-name-img-container{
-
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2em;
+  border-radius: 5%;
+  margin-left: 25%;
+  margin-top: 8%;
+  background-color: #207561;
+}
+.content{
+  display: flex;
+  
 }
 #homepage-mid-img{
   border-radius: 2rem;
@@ -123,6 +142,7 @@ a {
 .login-form-container{
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
 }
 
@@ -243,5 +263,29 @@ button {
   -webkit-appearance: none;
 }
 
-/*Account Info*/
+.footer-container1{
+  display: flex;
+  background-color: #207561;
+  justify-content: space-between;
+  height:10em;
+}
 
+.footer-container2{
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+  padding-top: 3em;
+  margin-left: 2em;
+  background-color: #207561;
+}
+.footer-container2 div img{
+  border-radius: 10%;
+}
+.wmp-head{
+  color: #ffffff;
+  font-family: 'Style Script', cursive;
+}
+.wmp-head{
+  font-size: 80px;
+  
+}

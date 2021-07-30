@@ -19,7 +19,7 @@ const HomePage = () => {
             <div className="homePage">
               <div className="content">
                 <div className='company-name-img-container'>
-                  <h1 className="display-3">Company Name</h1>
+                  <h1 className="wmp-head">Water My Plants</h1>
                   <img id="homepage-mid-img" src='https://www.ugaoo.com/knowledge-center/wp-content/uploads/2016/03/shutterstock_226079392-850x525.jpg' alt='Watering plant' />
                   <p className="lead">
                     WaterMyPlants will remind users when it's time to feed that
